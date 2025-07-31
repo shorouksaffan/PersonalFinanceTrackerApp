@@ -8,7 +8,7 @@
 
 
 ## File Responsibilities
-- MainActivity.kt & activity_main.xml: Member 1
+- MainActivity.kt & activity_main.xml: shorouksaffan
 - FinanceActivity.kt & activity_fiance.xml: Member 2
 - Resources (strings/colors/dimens): Member 3
 - Lifecycle logs testing: Member 4
