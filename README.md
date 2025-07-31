@@ -1,0 +1,16 @@
+# Expense Tracker App
+
+## Branch Strategy
+
+- `main` – Final stable code
+- `dev` – Shared development branch
+- `feature/*` – Each team member’s task
+
+
+## File Responsibilities
+- MainActivity.kt & activity_main.xml: Member 1
+- FinanceActivity.kt & activity_fiance.xml: Member 2
+- Resources (strings/colors/dimens): Member 3
+- Lifecycle logs testing: Member 4
+- Testing & UI Integration, combine all code: Member 5
+- GitHub write comments in the code , organize and push the final  code, and demo video make everything ready to submit /Docs/Demo Video: Member 6
