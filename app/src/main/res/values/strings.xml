@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">PersonalFinanceTrackerApp</string>
     <string name="share">Share</string>
-    <string name="track">Track Expense</string>
-    <string name="wel">Welcome to Expense Fairy</string>
+    <string name="track_expense">Track Expense</string>
+    <string name="welcome_to_expense_tracker_app">Welcome to Expense Tracker App</string>
+    <string name="expense_title">Expense Title</string>
+    <string name="expense_amount">Expense Amount</string>
+    <string name="expense_category">Expense Category</string>
+    <string name="expense_image">Expense Image</string>
 </resources>
