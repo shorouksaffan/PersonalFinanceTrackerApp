@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PersonalFinanceTrackerApp</string>
+    <string name="track_expense">track expense</string>
+    <string name="share_text">share</string>
+    <string name="welcome_message">welcome to expense app</string>
+    <string name="todo">TODO</string>
 </resources>
