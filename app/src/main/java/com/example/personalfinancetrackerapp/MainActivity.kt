@@ -1,5 +1,6 @@
 package com.example.personalfinancetrackerapp
 
+<<<<<<< HEAD
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -40,3 +41,10 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
     }
 }
+=======
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+
+}
+>>>>>>> origin/FinanceActivity

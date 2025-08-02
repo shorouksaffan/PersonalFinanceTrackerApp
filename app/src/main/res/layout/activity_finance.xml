@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/screenBackground">
+    android:background="#FFF0F6"
+    android:padding="35dp">
 
 
     <LinearLayout
@@ -22,9 +23,9 @@
             android:id="@+id/expenseEntry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Expense Entry Form"
+            android:text="@string/expense_entry_form"
             android:textSize="35sp"
-            android:textColor="@color/black"/>
+            android:textColor="#880E4F"/>
 
         <ImageView
             android:id="@+id/expenceImage"
@@ -51,7 +52,7 @@
             android:id="@+id/expenseName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Expense Name:"
+            android:text="@string/expense_name"
             android:textSize="20sp"
             android:textColor="@color/black"/>
 
@@ -59,7 +60,7 @@
             android:id="@+id/editExpenseName"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:hint="Ex. name"
+            android:hint="@string/ex_name"
             android:textSize="20sp"
             android:textColorHint="@color/hintText"
             android:layout_marginStart="10dp"/>
@@ -82,7 +83,7 @@
             android:id="@+id/amountTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Amount:"
+            android:text="@string/amount"
             android:textSize="20sp"
             android:textColor="@color/black"/>
 
@@ -90,7 +91,8 @@
             android:id="@+id/editAmount"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:hint="Ex.amount"
+            android:autofillHints="edit"
+            android:hint="@string/ex_amount"
             android:textSize="20sp"
             android:textColorHint="@color/hintText"
             android:layout_marginStart="10dp"/>
@@ -113,7 +115,7 @@
             android:id="@+id/categoryTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Category:"
+            android:text="@string/category"
             android:textSize="20sp"
             android:textColor="@color/black"/>
 
@@ -121,7 +123,8 @@
             android:id="@+id/editCategory"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:hint="Ex.Category"
+            android:autofillHints="category"
+            android:hint="@string/ex_category"
             android:textSize="20sp"
             android:textColorHint="@color/hintText"
             android:layout_marginStart="10dp"/>
@@ -132,11 +135,15 @@
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="#F48FB1"
         android:text="@string/save_expense"
-        android:layout_marginBottom="100dp"
         android:textColor="@color/black"
-        android:backgroundTint="@color/btnBackGround"
+        app:cornerRadius="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/categoryGroup"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
