@@ -30,7 +30,7 @@
             android:id="@+id/expenceImage"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/image"
+            android:src=""
             android:layout_marginTop="30dp"/>
     </LinearLayout>
 
