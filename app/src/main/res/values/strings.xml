@@ -22,4 +22,12 @@
     <string name="expense_title">Expense Title</string>
     <string name="expense_category">Expense Category</string>
     <string name="expense_amount">Expense Amount</string>
+    <string name="add_new_expense">Add Expense</string>
+    <string name="the_amount_can_not_be_empty">The Amount can not be empty</string>
+    <string name="expenses_name_must_contain_letters_only">Expenses name must contain letters only</string>
+    <string name="expenses_name_can_not_be_empty">Expenses name can not be empty</string>
+    <string name="the_amount_must_be_integers_only">The Amount must be integers only</string>
+    <string name="category_name_can_not_be_empty">Category name can not be empty</string>
+    <string name="category_name_must_contain_letters_only">Category name must contain letters only</string>
+    <string name="expenses_added_successfully">Expenses added successfully</string>
 </resources>
