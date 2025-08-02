@@ -2,7 +2,7 @@
 
 ## Branch Strategy
 
-- `main` – Final stable code
+- `master` – Final stable code
 - `dev` – Shared development branch
 - `feature/*` – Each team member’s task
 
