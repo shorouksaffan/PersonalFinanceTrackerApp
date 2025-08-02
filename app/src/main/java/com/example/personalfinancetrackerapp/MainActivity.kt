@@ -1,4 +1,7 @@
 package com.example.personalfinancetrackerapp
 
-class MainActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+
 }
