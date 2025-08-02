@@ -1,5 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PersonalFinanceTrackerApp</string>
-
-    <string name="save_expense">Save Expense</string>
+    <string name="main_title">Welcome to the Expense Tracker</string>
+    <string name="add_expense">Add Expense</string>
+    <string name="expense_label">Expense Name</string>
+    <string name="amount_label">Amount</string>
+    <string name="submit">Submit</string>
 </resources>
+

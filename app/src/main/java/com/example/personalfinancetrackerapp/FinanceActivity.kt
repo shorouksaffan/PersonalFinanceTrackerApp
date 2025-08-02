@@ -4,16 +4,18 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.personalfinancetrackerapp.R
 
 class FinanceActivity : AppCompatActivity() {
     val TAG = "Lifecycle"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_finance)
 
+        Log.d(TAG, "onCreate called")
     }
-
 
     override fun onStart() {
         super.onStart()
