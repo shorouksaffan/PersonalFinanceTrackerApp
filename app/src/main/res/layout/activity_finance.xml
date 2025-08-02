@@ -23,7 +23,7 @@
             android:id="@+id/expenseEntry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Expense Entry Form"
+            android:text="@string/expense_entry_form"
             android:textSize="35sp"
             android:textColor="#880E4F"/>
 
@@ -52,7 +52,7 @@
             android:id="@+id/expenseName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Expense Name:"
+            android:text="@string/expense_name"
             android:textSize="20sp"
             android:textColor="@color/black"/>
 
@@ -60,7 +60,7 @@
             android:id="@+id/editExpenseName"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:hint="Ex. name"
+            android:hint="@string/ex_name"
             android:textSize="20sp"
             android:textColorHint="@color/hintText"
             android:layout_marginStart="10dp"/>
@@ -83,7 +83,7 @@
             android:id="@+id/amountTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Amount:"
+            android:text="@string/amount"
             android:textSize="20sp"
             android:textColor="@color/black"/>
 
@@ -91,7 +91,7 @@
             android:id="@+id/editAmount"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:hint="Ex.amount"
+            android:hint="@string/ex_amount"
             android:textSize="20sp"
             android:textColorHint="@color/hintText"
             android:layout_marginStart="10dp"/>
@@ -114,7 +114,7 @@
             android:id="@+id/categoryTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Category:"
+            android:text="@string/category"
             android:textSize="20sp"
             android:textColor="@color/black"/>
 
@@ -122,7 +122,7 @@
             android:id="@+id/editCategory"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:hint="Ex.Category"
+            android:hint="@string/ex_category"
             android:textSize="20sp"
             android:textColorHint="@color/hintText"
             android:layout_marginStart="10dp"/>

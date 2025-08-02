@@ -2,4 +2,11 @@
     <string name="app_name">PersonalFinanceTrackerApp</string>
 
     <string name="save_expense">Save Expense</string>
+    <string name="expense_name">Expense Name:</string>
+    <string name="ex_name">Ex. name</string>
+    <string name="amount">Amount:</string>
+    <string name="ex_amount">Ex.amount</string>
+    <string name="category">Category:</string>
+    <string name="ex_category">Ex.Category</string>
+    <string name="expense_entry_form">Expense Entry Form</string>
 </resources>
