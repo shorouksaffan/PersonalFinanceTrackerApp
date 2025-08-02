@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PersonalFinanceTrackerApp</string>
+
+    <string name="save_expense">Save Expense</string>
 </resources>
