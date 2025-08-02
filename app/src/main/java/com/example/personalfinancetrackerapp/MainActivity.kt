@@ -8,6 +8,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class  MainActivity : AppCompatActivity() {
+    val expenses = mutableListOf(
+        Expense("Lunch", 10.0, "Food"),
+        Expense("Transport", 5.0, "Travel"),
+        Expense("Groceries", 20.0, "Food")
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,11 +36,7 @@ class  MainActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.expensesRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        val expenses = listOf(
-            Expense("Lunch", 10.0, "Food"),
-            Expense("Transport", 5.0, "Travel"),
-            Expense("Groceries", 20.0, "Food")
-        )
+
         val adapter = ExpenseAdapter(expenses)
         recyclerView.adapter = adapter
     }
