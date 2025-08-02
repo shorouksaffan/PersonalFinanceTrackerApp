@@ -6,10 +6,7 @@
     <string name="expense_label">Expense Name</string>
     <string name="amount_label">Amount</string>
     <string name="submit">Submit</string>
-</resources>
 
-<<<<<<< HEAD
-=======
     <string name="save_expense">Save Expense</string>
     <string name="expense_name">Expense Name:</string>
     <string name="ex_name">Ex. name</string>
@@ -18,5 +15,11 @@
     <string name="category">Category:</string>
     <string name="ex_category">Ex.Category</string>
     <string name="expense_entry_form">Expense Entry Form </string>
+    <string name="share">Share</string>
+    <string name="track_expense">Track Expense</string>
+    <string name="welcome_to_expense_tracker_app">Welcome to Expense Tracker App</string>
+    <string name="expense_image">Expense Image</string>
+    <string name="expense_title">Expense Title</string>
+    <string name="expense_category">Expense Category</string>
+    <string name="expense_amount">Expense Amount</string>
 </resources>
->>>>>>> origin/FinanceActivity
