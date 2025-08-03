@@ -1,14 +1,9 @@
 package com.example.personalfinancetrackerapp
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Adapter
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.personalfinancetrackerapp.ExpenseRepository.expenses
 import com.example.personalfinancetrackerapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +11,7 @@ class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
     val binding get() = _binding!!
 
-    val adapter = ExpenseAdapter(ExpenseRepository.expenses)
+    val adapter = ExpenseAdapter(expenses)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,21 +24,30 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnShare.setOnClickListener {
+            val balance = expenses.sumOf { it.amount }
+            val message = if (balance == 0.0) {
+                getString(R.string.no_expenses)
+            } else {
+                getString(R.string.total_expenses) + ": $balance\n" +
+                        expenses.joinToString("\n") { "${it.name} – ${it.amount} (${it.category})" }
+            }
             val shareIntent = Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
-                putExtra(Intent.EXTRA_TEXT, "I just added a new expense: Lunch – $10")
+                putExtra(Intent.EXTRA_TEXT, message)
             }
-            startActivity(Intent.createChooser(shareIntent, "Share expense via"))
+            startActivity(Intent.createChooser(shareIntent, getString(R.string.share_expenses)))
         }
-
         binding.expensesRecyclerView.layoutManager = LinearLayoutManager(this)
-        adapter.notifyItemInserted(expenses.size - 1)
         binding.expensesRecyclerView.adapter = adapter
-
     }
 
     override fun onResume() {
         super.onResume()
+        if (expenses.isEmpty()) {
+            binding.emptyTextView.visibility = android.view.View.VISIBLE
+        } else {
+            binding.emptyTextView.visibility = android.view.View.GONE
+        }
         adapter.notifyDataSetChanged()
     }
 }

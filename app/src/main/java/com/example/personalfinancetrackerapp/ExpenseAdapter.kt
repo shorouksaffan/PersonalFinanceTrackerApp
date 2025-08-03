@@ -14,15 +14,15 @@ class ExpenseAdapter(var expenses: List<Expense>) :
         private val expenseCategory: TextView? = null
 
         fun getExpenseName(): TextView? {
-            return expenseName ?: itemView.findViewById<TextView>(R.id.expenseName)
+            return expenseName ?: itemView.findViewById(R.id.expenseName)
         }
 
         fun getExpenseAmount(): TextView? {
-            return expenseAmount ?: itemView.findViewById<TextView>(R.id.expenseAmount)
+            return expenseAmount ?: itemView.findViewById(R.id.expenseAmount)
         }
 
         fun getExpenseCategory(): TextView? {
-            return expenseCategory ?: itemView.findViewById<TextView>(R.id.expenseCategory)
+            return expenseCategory ?: itemView.findViewById(R.id.expenseCategory)
         }
     }
 

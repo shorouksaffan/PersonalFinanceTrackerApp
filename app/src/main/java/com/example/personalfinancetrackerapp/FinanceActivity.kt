@@ -1,16 +1,11 @@
 package com.example.personalfinancetrackerapp
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.text.set
-import com.example.personalfinancetrackerapp.ExpenseRepository.expenses
-import com.example.personalfinancetrackerapp.R
 import com.example.personalfinancetrackerapp.databinding.ActivityFinanceBinding
-import com.example.personalfinancetrackerapp.databinding.ActivityMainBinding
 
 class FinanceActivity : AppCompatActivity() {
 
@@ -26,40 +21,60 @@ class FinanceActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnSave.setOnClickListener {
-            if (binding.editExpenseName.text.isNullOrBlank()||binding.editExpenseName.text.isEmpty()){
-                Toast.makeText(this,
-                    getString(R.string.expenses_name_can_not_be_empty), Toast.LENGTH_SHORT).show()
+            if (binding.editExpenseName.text.isNullOrBlank() || binding.editExpenseName.text.isEmpty()) {
+                Toast.makeText(
+                    this,
+                    getString(R.string.expenses_name_can_not_be_empty), Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
             }
-            if (binding.editExpenseName.text.toString().lowercase().filter { it >= 'a' && it <= 'z' }.length != binding.editExpenseName.text.toString().length){
-                Toast.makeText(this,
-                    getString(R.string.expenses_name_must_contain_letters_only), Toast.LENGTH_SHORT).show()
+            if (binding.editExpenseName.text.toString().lowercase()
+                    .filter { it >= 'a' && it <= 'z' }.length != binding.editExpenseName.text.toString().length
+            ) {
+                Toast.makeText(
+                    this,
+                    getString(R.string.expenses_name_must_contain_letters_only), Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
             }
-            if (binding.editAmount.text.isNullOrBlank()||binding.editAmount.text.isEmpty()) {
-                Toast.makeText(this,
-                    getString(R.string.the_amount_can_not_be_empty), Toast.LENGTH_SHORT).show()
+            if (binding.editAmount.text.isNullOrBlank() || binding.editAmount.text.isEmpty()) {
+                Toast.makeText(
+                    this,
+                    getString(R.string.the_amount_can_not_be_empty), Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
             }
-            if (binding.editAmount.text.toString().toDoubleOrNull()==null){
-                Toast.makeText(this,
-                    getString(R.string.the_amount_must_be_integers_only), Toast.LENGTH_SHORT).show()
+            if (binding.editAmount.text.toString().toDoubleOrNull() == null) {
+                Toast.makeText(
+                    this,
+                    getString(R.string.the_amount_must_be_integers_only), Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
             }
-            if (binding.editCategory.text.isNullOrBlank()||binding.editCategory.text.isEmpty()){
-                Toast.makeText(this,
-                    getString(R.string.category_name_can_not_be_empty), Toast.LENGTH_SHORT).show()
+            if (binding.editCategory.text.isNullOrBlank() || binding.editCategory.text.isEmpty()) {
+                Toast.makeText(
+                    this,
+                    getString(R.string.category_name_can_not_be_empty), Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
             }
-            if (binding.editCategory.text.toString().lowercase().filter { it >= 'a' && it <= 'z' }.length != binding.editCategory.text.toString().length){
-                Toast.makeText(this,
-                    getString(R.string.category_name_must_contain_letters_only), Toast.LENGTH_SHORT).show()
+            if (binding.editCategory.text.toString().lowercase()
+                    .filter { it >= 'a' && it <= 'z' }.length != binding.editCategory.text.toString().length
+            ) {
+                Toast.makeText(
+                    this,
+                    getString(R.string.category_name_must_contain_letters_only), Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
             }
             val name = binding.editExpenseName.text.toString()
             val amount = binding.editAmount.text.toString().toDoubleOrNull()!!
-            val category = binding.categoryTxt.text.toString()
-            Toast.makeText(this, getString(R.string.expenses_added_successfully), Toast.LENGTH_SHORT).show()
+            val category = binding.editCategory.text.toString()
+            Toast.makeText(
+                this,
+                getString(R.string.expenses_added_successfully),
+                Toast.LENGTH_SHORT
+            ).show()
             binding.editAmount.text.clear()
             binding.editCategory.text.clear()
             binding.editExpenseName.text.clear()
