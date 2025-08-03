@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.set
+import com.example.personalfinancetrackerapp.ExpenseRepository.expenses
 import com.example.personalfinancetrackerapp.R
 import com.example.personalfinancetrackerapp.databinding.ActivityFinanceBinding
 import com.example.personalfinancetrackerapp.databinding.ActivityMainBinding
@@ -62,10 +63,10 @@ class FinanceActivity : AppCompatActivity() {
             binding.editAmount.text.clear()
             binding.editCategory.text.clear()
             binding.editExpenseName.text.clear()
-            MainActivity.expenses.add(Expense(name = name, amount = amount, category = category))
-            MainActivity.adapter.notifyItemInserted(MainActivity.expenses.size-1)
-            val intent = Intent(this,MainActivity::class.java)
-            startActivity(intent)
+            expenses.add(Expense(name = name, amount = amount, category = category))
+//            val intent = Intent(this,MainActivity::class.java)
+//            startActivity(intent)
+            finish()
         }
 
 
