@@ -8,9 +8,8 @@
 
 
 ## File Responsibilities
-- MainActivity.kt & activity_main.xml: shorouksaffan
-- FinanceActivity.kt & activity_fiance.xml: Member 2
-- Resources (strings/colors/dimens): Member 3
-- Lifecycle logs testing: Member 4
-- Testing & UI Integration, combine all code  (merge): Member 5
-- GitHub write comments in the code, organize and push the final  code, and demo video make sure everything is ready to be submitted: Member 6
+- MainActivity.kt & activity_main.xml: shorouk saffan
+- life cycle : ismail ayman
+- Add new expenses logic and testing :Mohamed Mostafa
+- expence activity xml and logs: Ebrahim Gamal
+- Resources, Recycler View, Custom Expense Item, and app Icon : Eslam Magdy
