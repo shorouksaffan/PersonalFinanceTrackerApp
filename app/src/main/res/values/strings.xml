@@ -1,3 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PersonalFinanceTrackerApp</string>
+    <string name="main_title">Welcome to the Expense Tracker</string>
+    <string name="add_expense">Add Expense</string>
+    <string name="expense_label">Expense Name</string>
+    <string name="amount_label">Amount</string>
+    <string name="submit">Submit</string>
+
+    <string name="save_expense">Save Expense</string>
+    <string name="expense_name">Expense Name:</string>
+    <string name="ex_name">Ex. name</string>
+    <string name="amount">Amount:</string>
+    <string name="ex_amount">Ex.amount</string>
+    <string name="category">Category:</string>
+    <string name="ex_category">Ex.Category</string>
+    <string name="expense_entry_form">Expense Entry Form </string>
+    <string name="share">Share</string>
+    <string name="track_expense">Track Expense</string>
+    <string name="welcome_to_expense_tracker_app">Welcome to Expense Tracker App</string>
+    <string name="expense_image">Expense Image</string>
+    <string name="expense_title">Expense Title</string>
+    <string name="expense_category">Expense Category</string>
+    <string name="expense_amount">Expense Amount</string>
+    <string name="add_new_expense">Add Expense</string>
+    <string name="the_amount_can_not_be_empty">The Amount can not be empty</string>
+    <string name="expenses_name_must_contain_letters_only">Expenses name must contain letters only</string>
+    <string name="expenses_name_can_not_be_empty">Expenses name can not be empty</string>
+    <string name="the_amount_must_be_integers_only">The Amount must be integers only</string>
+    <string name="category_name_can_not_be_empty">Category name can not be empty</string>
+    <string name="category_name_must_contain_letters_only">Category name must contain letters only</string>
+    <string name="expenses_added_successfully">Expenses added successfully</string>
+    <string name="share_expenses">Share Expenses</string>
+    <string name="no_expenses_found">No expenses found</string>
+    <string name="no_expenses">No Expenses</string>
+    <string name="total_expenses">Total Expenses</string>
+    <string name="expense_image_form">Expense Image</string>
 </resources>

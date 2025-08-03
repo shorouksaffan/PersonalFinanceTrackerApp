@@ -5,6 +5,11 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+    <color name="screenBackground">#FFF0F6</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="hintText">#888888</color>
+    <color name="text_primary_dark">#880E4F</color>
+    <color name="button_pink">#F48FB1</color>
+    <color name="button_violet">#CE93D8</color>
 </resources>

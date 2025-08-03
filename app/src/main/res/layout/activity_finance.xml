@@ -1,6 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/screenBackground"
+    android:padding="@dimen/padding_large">
 
+
+    <LinearLayout
+        android:id="@+id/headerGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/expenseEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/expense_entry_form"
+            android:textColor="@color/text_primary_dark"
+            android:textSize="@dimen/text_xxlarge" />
+
+        <ImageView
+            android:id="@+id/expenceImage"
+            android:layout_width="@dimen/image_medium"
+            android:layout_height="@dimen/image_medium"
+            android:layout_marginTop="@dimen/margin_large"
+            android:contentDescription="@string/expense_image_form"
+            android:src="@drawable/track_expence" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/nameGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerGroup">
+
+        <TextView
+            android:id="@+id/expenseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/expense_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large" />
+
+        <EditText
+            android:id="@+id/editExpenseName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:autofillHints="name"
+            android:hint="@string/ex_name"
+            android:inputType="text"
+            android:textColorHint="@color/hintText"
+            android:textSize="@dimen/text_large" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/amountGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameGroup">
+
+        <TextView
+            android:id="@+id/amountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large" />
+
+        <EditText
+            android:id="@+id/editAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:autofillHints="edit"
+            android:hint="@string/ex_amount"
+            android:inputType="numberDecimal"
+            android:textColorHint="@color/hintText"
+            android:textSize="@dimen/text_large" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/categoryGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amountGroup">
+
+        <TextView
+            android:id="@+id/categoryTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/category"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large" />
+
+        <EditText
+            android:id="@+id/editCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:autofillHints="category"
+            android:hint="@string/ex_category"
+            android:inputType="text"
+            android:textColorHint="@color/hintText"
+            android:textSize="@dimen/text_large" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:backgroundTint="@color/button_pink"
+        android:text="@string/save_expense"
+        android:textColor="@color/black"
+        app:cornerRadius="@dimen/corner_radius_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryGroup"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

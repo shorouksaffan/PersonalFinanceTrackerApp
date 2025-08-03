@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_xsmall"
+    app:cardCornerRadius="@dimen/corner_radius_small"
+    app:strokeColor="?attr/colorOutline"
+    app:strokeWidth="@dimen/stroke_width">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/padding_small">
+
+        <ImageView
+            android:id="@+id/expenseImage"
+            android:layout_width="@dimen/image_thumb"
+            android:layout_height="@dimen/image_thumb"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:contentDescription="@string/expense_image"
+            android:src="@drawable/image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/expenseName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:text="@string/expense_title"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintStart_toEndOf="@id/expenseImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/expenseCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:text="@string/expense_category"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintStart_toStartOf="@+id/expenseName"
+            app:layout_constraintTop_toBottomOf="@+id/expenseName" />
+
+        <TextView
+            android:id="@+id/expenseAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:text="@string/expense_amount"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/expenseName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
